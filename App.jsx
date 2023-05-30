@@ -1,5 +1,5 @@
 /**
- * HomeScreen
+ * App
  * @author drpyzz (Gustavo)
 */
 

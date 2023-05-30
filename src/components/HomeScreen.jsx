@@ -1,5 +1,5 @@
 /**
- * HomeScreen
+ * HomeScreen.jsx
  * @author drpyzz (Gustavo)
 */
 

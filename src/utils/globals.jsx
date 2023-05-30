@@ -1,5 +1,5 @@
 /**
- * HomeScreen
+ * Styles globais da aplicação
  * @author drpyzz (Gustavo)
 */
 
@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-});
+  }
+);
 
 export default styles;
