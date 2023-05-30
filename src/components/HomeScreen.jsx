@@ -1,3 +1,8 @@
+/**
+ * HomeScreen
+ * @author drpyzz (Gustavo)
+*/
+
 import { Text, View } from 'react-native';
 
 import styles from '../utils/globals';
