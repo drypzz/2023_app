@@ -3,7 +3,9 @@
  * @author @drypzz
 */
 
-import { Text, View } from 'react-native';
+import React, { useState } from 'react';
+
+import { View, Image, KeyboardAvoidingView } from 'react-native';
 
 import styles from '../utils/globals';
 
@@ -15,11 +17,15 @@ import styles from '../utils/globals';
  * @description Page that will be shown after the loading screen
  * @returns {JSX.Element} HomeScreen
 */
-const HomeScreen = () => {
+const HomeScreen = ( {navigation} ) => {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <KeyboardAvoidingView style={styles.container}>
+      <View>
+        <Image source={require('../files/images/logo.png')}/>
+      </View>
+      
+    </KeyboardAvoidingView>
   );
 };
 

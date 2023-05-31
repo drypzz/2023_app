@@ -4,6 +4,7 @@
 */
 
 import { Text, View } from 'react-native';
+import { ActivityIndicator } from 'react-native-paper';
 
 import styles from '../../utils/globals';
 
@@ -15,10 +16,11 @@ import styles from '../../utils/globals';
  * @description Page that will be shown before the home screen
  * @returns {JSX.Element} LoadingScreen
 */
-const LoadingScreen = () => {
+const LoadingScreen = ( {size, color, title} ) => {
   return (
     <View style={styles.container}>
-      <Text>Carregando...</Text>
+      <ActivityIndicator size={size} color={color} />
+      <Text>{title}</Text>
     </View>
   );
 };

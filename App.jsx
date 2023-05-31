@@ -6,7 +6,8 @@
 import React, { useEffect, useState } from 'react';
 
 import LoadingScreen from './src/components/loading/LoadingScreen';
-import HomeScreen from './src/components/HomeScreen';
+
+import RootNavigation from './src/index';
 
 /**
  * App.jsx
@@ -16,18 +17,17 @@ import HomeScreen from './src/components/HomeScreen';
  * @returns {JSX.Element} App
 */
 function App() {
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 1000);
   }, []);
 
   return (
     <>
-      {isLoading ? <LoadingScreen /> : <HomeScreen />}
+      {isLoading ? <LoadingScreen title={'Carregando...'} size={30} color={'rgb(53, 153, 204)'} /> : <RootNavigation />}
     </>
   );
 };
