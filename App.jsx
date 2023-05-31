@@ -5,7 +5,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-import LoadingScreen from './src/components/LoadingScreen';
+import LoadingScreen from './src/components/loading/LoadingScreen';
 import HomeScreen from './src/components/HomeScreen';
 
 /**

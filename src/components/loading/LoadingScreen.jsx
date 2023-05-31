@@ -5,7 +5,7 @@
 
 import { Text, View } from 'react-native';
 
-import styles from '../utils/globals';
+import styles from '../../utils/globals';
 
 /**
  * LoadingScreen.jsx
