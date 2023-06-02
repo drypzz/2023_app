@@ -1,11 +1,11 @@
 /**
  * HomeScreen.jsx
- * @author @drypzz
+ * @author @drypzz @function404
 */
 
 import React, { useState, useEffect } from 'react';
 
-import { View, Image, Text, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard, KeyboardDidShowListener, KeyboardDidHideListener } from 'react-native';
+import { View, Image, Text, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard, KeyboardDidShowListener, KeyboardDidHideListener,  } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -15,7 +15,7 @@ import styles from '../utils/globals';
  * HomeScreen.jsx
  * @since 30-05-2023
  * @version 1.0.0
- * @author @drypzz
+ * @author @drypzz @function404
  * @description Page that will be shown after the loading screen
  * @returns {JSX.Element} HomeScreen
 */
@@ -105,7 +105,7 @@ const HomeScreen = ( {navigation} ) => {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.btnCreate}>
-          <Text style={styles.createText}>Ja tem uma conta? clique aqui</Text>
+          <Text style={styles.createText}>Não tem uma conta? clique aqui</Text>
         </TouchableOpacity>
       </Animated.View>
       
@@ -114,7 +114,7 @@ const HomeScreen = ( {navigation} ) => {
 };
 
 /**
- * @author @drypzz
+ * @author @drypzz 
  * @exports HomeScreen
  * @description Exporting the HomeScreen component
 */
