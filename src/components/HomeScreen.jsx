@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-import { View, Image, Text, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard, KeyboardDidShowListener, KeyboardDidHideListener,  } from 'react-native';
+import { View, Image, Text, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -26,9 +26,8 @@ const HomeScreen = ( {navigation} ) => {
   const [logo] = useState(new Animated.ValueXY({x: 200, y: 200}));
 
   useEffect(() => {
-    KeyboardDidShowListener =Keyboard.addListener('keyboardDidShow', keyboardDidShow);
-    KeyboardDidHideListener =Keyboard.addListener('keyboardDidHide', keyboardDidHide);
-
+    Keyboard.addListener('keyboardDidShow', keyboardDidShow);
+    Keyboard.addListener('keyboardDidHide', keyboardDidHide);
 
     Animated.parallel([
       Animated.spring(offset.y, {
