@@ -1,30 +1,28 @@
 /**
- * HomeScreen.jsx
+ * LoginScreen.jsx
  * @author @drypzz @function404
 */
 
 import React, { useState, useEffect } from 'react';
 
-import { View, Image, Text, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard } from 'react-native';
+import { View, Image, Text, KeyboardAvoidingView, TextInput, TouchableOpacity, Animated, Keyboard, Linking } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import styles from '../utils/globals';
 
 /**
- * HomeScreen.jsx
+ * LoginScreen.jsx
  * @since 30-05-2023
  * @version 1.0.0
  * @author @drypzz @function404
  * @description Page that will be shown after the loading screen
- * @returns {JSX.Element} HomeScreen
+ * @returns {JSX.Element} LoginScreen
 */
-const HomeScreen = ( {navigation} ) => {
-
+const LoginScreen = ( {navigation} ) => {
   const [offset] = useState(new Animated.ValueXY({x: 0, y: 95}));
   const [opacity] = useState(new Animated.Value(0));
-  const [logo] = useState(new Animated.ValueXY({x: 200, y: 200}));
-
+  const [logo] = useState(new Animated.ValueXY({x: 130, y: 155}));
   useEffect(() => {
     Keyboard.addListener('keyboardDidShow', keyboardDidShow);
     Keyboard.addListener('keyboardDidHide', keyboardDidHide);
@@ -47,11 +45,11 @@ const HomeScreen = ( {navigation} ) => {
   function keyboardDidShow(){
     Animated.parallel([
       Animated.timing(logo.x,{
-        toValue: 60,
+        toValue: 55,
         duration: 100,
       }),
       Animated.timing(logo.y,{
-        toValue: 60,
+        toValue: 65,
         duration: 100,
       }),
     ]).start();
@@ -60,11 +58,11 @@ const HomeScreen = ( {navigation} ) => {
   function keyboardDidHide(){
     Animated.parallel([
       Animated.timing(logo.x,{
-        toValue: 200,
+        toValue: 130,
         duration: 100,
       }),
       Animated.timing(logo.y,{
-        toValue: 200,
+        toValue: 155,
         duration: 100,
       }),
     ]).start();
@@ -104,7 +102,15 @@ const HomeScreen = ( {navigation} ) => {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.btnCreate}>
-          <Text style={styles.createText}>Não tem uma conta? clique aqui</Text>
+          <Text style={styles.createText}>Não tem uma conta?
+            <Text 
+              style={styles.hyperlinkStyle} 
+              onPress={() => { 
+                navigation.navigate('RegisterScreen');
+              }}>
+              Clique Aqui 
+            </Text>
+          </Text>
         </TouchableOpacity>
       </Animated.View>
       
@@ -114,7 +120,7 @@ const HomeScreen = ( {navigation} ) => {
 
 /**
  * @author @drypzz 
- * @exports HomeScreen
- * @description Exporting the HomeScreen component
+ * @exports LoginScreen
+ * @description Exporting the LoginScreen component
 */
-export default HomeScreen;
+export default LoginScreen;

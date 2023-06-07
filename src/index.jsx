@@ -1,4 +1,5 @@
-import HomeScreen from './components/HomeScreen';
+import LoginScreen from './components/LoginScreen';
+import RegisterScreen from './components/RegisterScreen';
 import initScreen from './screens/initScreen';
 
 
@@ -12,8 +13,9 @@ export default function RootNavigation() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name='HomeScreen' component={HomeScreen} options={{headerShown: false}} />
+                <Stack.Screen name='Login' component={LoginScreen} options={{headerShown: false}} />
                 <Stack.Screen name='InitScreen' component={initScreen} options={{headerShown: false}} />
+                <Stack.Screen name='RegisterScreen' component={RegisterScreen} options={{headerShown: false}} />
             </Stack.Navigator>
         </NavigationContainer>
     );
