@@ -5,7 +5,7 @@ import styles from '../utils/globals';
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Documentação do P.I</Text>
     </View>
   );
 };
